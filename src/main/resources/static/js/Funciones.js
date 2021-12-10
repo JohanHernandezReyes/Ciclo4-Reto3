@@ -59,7 +59,7 @@ function validarconfirm(password, confirm) {
 
 function ValidarDuplicado(email, callbackFunction) {
     $.ajax({
-        url: "http://129.151.117.220:9003/api/user/all",
+        url: "http://129.151.117.220:8003/api/user/all",
         type: "GET",
         datatype: "JSON",
         success: function (respuesta) {
@@ -108,7 +108,7 @@ function NuevoUsuario() {
     let dataToSend = JSON.stringify(myData);
     console.log(dataToSend);
     $.ajax({
-        url: "http://129.151.117.220:9003/api/user/new",
+        url: "http://129.151.117.220:8003/api/user/new",
         type: "POST",
         data: dataToSend,
         contentType: "application/JSON",
@@ -140,7 +140,7 @@ function ValidarUsuario(email){
     let myData = email;
     validarvacio($("#uemail").val(), "Debe ingresar un e-mail");
     $.ajax({
-        url: "http://129.151.117.220:9003/api/user/emailexist/" + myData,
+        url: "http://129.151.117.220:8003/api/user/emailexist/" + myData,
         type: "GET",
         data: myData,
         contentType: "application/JSON",
@@ -162,7 +162,7 @@ function Autenticacion(email, password) {
     validarvacio($("#uemail").val(), "Debe ingresar un e-mail");
     validarvacio($("#upassword").val(), "Debe ingresar una contraseña valida");
     $.ajax({
-        url: "http://129.151.117.220:9003/api/user/" + email + "/" + password,
+        url: "http://129.151.117.220:8003/api/user/" + email + "/" + password,
         type: "GET",
         data: email + "/" + password,
         contentType: "application/JSON",
@@ -188,7 +188,7 @@ function Autenticacion(email, password) {
 
 function nuevoid() {
     $.ajax({
-        url: "http://129.151.117.220:9003/api/user/all",
+        url: "http://129.151.117.220:8003/api/user/all",
         type: "GET",
         datatype: "JSON",
         success: function (respuesta) {
@@ -208,7 +208,7 @@ function nuevoid() {
 
 function ConsultarUsuarios() {
     $.ajax({
-        url: "http://129.151.117.220:9003/api/user/all",
+        url: "http://129.151.117.220:8003/api/user/all",
         type: "GET",
         datatype: "JSON",
         success: function (respuesta) {
@@ -269,7 +269,7 @@ else{
 function BorrarUsuario(idElemento){
     let myData = idElemento;
     $.ajax({
-        url:"http://129.151.117.220:9003/api/user/"+myData,
+        url:"http://129.151.117.220:8003/api/user/"+myData,
         type:"DELETE",
         data:myData,
         contentType:"application/JSON",
@@ -302,7 +302,7 @@ function ModificarUsuario(idElement){
     bot.removeAttribute("onclick");bot.setAttribute("onclick", "ActualizarUsuario()");
     let myData = idElement;
     $.ajax({
-        url: "http://129.151.117.220:9003/api/user/" + myData,
+        url: "http://129.151.117.220:8003/api/user/" + myData,
         type: "GET",
         data: myData,
         contentType: "application/JSON",
@@ -347,7 +347,7 @@ function ActualizarUsuario() {
     let dataToSend = JSON.stringify(myData);
     console.log(dataToSend);
     $.ajax({
-        url: "http://129.151.117.220:9003/api/user/update",
+        url: "http://129.151.117.220:8003/api/user/update",
         type: "PUT",
         data: dataToSend,
         contentType: "application/JSON",
@@ -375,7 +375,7 @@ function ActualizarUsuario() {
 //Tabla Productos
 function ValidarProdDuplicado(reference, callbackFunction) {
     $.ajax({
-        url: "http://129.151.117.220:9003/api/cookware/all",
+        url: "http://129.151.117.220:8003/api/cookware/all",
         type: "GET",
         datatype: "JSON",
         success: function (respuesta) {
@@ -424,7 +424,7 @@ function NuevoProducto() {
     let dataToSend = JSON.stringify(myData);
     console.log(dataToSend);
     $.ajax({
-        url: "http://129.151.117.220:9003/api/cookware/new",
+        url: "http://129.151.117.220:8003/api/cookware/new",
         type: "POST",
         data: dataToSend,
         contentType: "application/JSON",
@@ -453,7 +453,7 @@ function guardarProducto(){
      
 function ConsultarProductos() {
     $.ajax({
-        url: "http://129.151.117.220:9003/api/cookware/all",
+        url: "http://129.151.117.220:8003/api/cookware/all",
         type: "GET",
         datatype: "JSON",
         success: function (respuesta) {
@@ -517,7 +517,7 @@ function BorrarProducto(numrow){
     let myData= fila.firstChild.nodeValue;
 
     $.ajax({
-        url:"http://129.151.117.220:9003/api/cookware/"+myData,
+        url:"http://129.151.117.220:8003/api/cookware/"+myData,
         type:"DELETE",
         data:myData,
         contentType:"application/JSON",
@@ -554,7 +554,7 @@ function ModificarProducto(numrow){
 
     
     $.ajax({
-        url: "http://129.151.117.220:9003/api/cookware/" + myData,
+        url: "http://129.151.117.220:8003/api/cookware/" + myData,
         type: "GET",
         data: myData,
         contentType: "application/JSON",
