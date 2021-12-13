@@ -13,18 +13,21 @@
         <script type="text/javascript" src="js/Funciones.js"></script>
     </head>
 
-    <body class="container aut" onload="nuevoid(); Verificarlogin();">
-        <header>
-            <h1><img class="imgheader" src="/logo_sin_fondo.png">La Sarten por el Mango</h1>
-        </header>
+    <body class="container aut" onload="nuevoid(); Verificarlogin(sessionStorage.getItem('name'), sessionStorage.getItem('role'));">
+        <div class="container">
+            <header>
+                    <h1><img class="imgheader" src="/logo_sin_fondo.png">La Sarten por el Mango</h1>
+            </header>  
             <button id="viewusers" onclick="ConsultarUsuarios()">Consultar Usuarios</button><br><br>
             <button id="newusers" onclick="MostrarFormNuevoUsuario()">Crear un usuario</button><br><br>
-           
-            <div id="ResultUsers"></div>
-           
+            
+            <div class="col-12" id="ResultUsers"></div>
+                  
+            <div class="row">
             <h3 id="titnew" align="center" hidden="true"><b></b><br></h3>
-            <div id="formregistro" class="formbig" hidden="true">
-                <section style="float:left">
+           
+            <div id="formregistro" class="formbig col-5" hidden="true">
+                <section class="col-2" style="float:left">
                     <label><b>Id:</b></label>
                     <input style="width:15%" id="iduser" type="number" disabled="disabled" hidden="true"></input><br>
                     <label><b>Nombre:</b></label><br>
@@ -38,7 +41,7 @@
                     <label><b>Zona:</b></label>
                     <input id="zona" type="text"><br>
                 </section>
-                <section style="float:right">
+                <section class="col-6" style="float:right">
                     <label style="height: 12%"><b></b></label>
                     <label><b>E-mail:</b></label><br>
                     <input id="email" type="text"><br>
@@ -50,20 +53,24 @@
                     <select id="tipo" style="width:85%" style="height:55%">
                         <option value="ADM">Administrador</option>
                         <option value="COORD">Coordinador</option>
-                        <option value="VTAS">Asesor de Ventas</option>
-                    </select><br> <br>
+                        <option value="ASE">Asesor de Ventas</option>
+                    </select><br>
+                    <label for="birthday"><b>Fecha Nacimiento:</b></label>
+                    <input id="birthday" type="date"><br><br>
                     <div id="bt" style="text-align: center">
                         <button id="BGUser" onclick="guardarUsuario()"></button>
                     </div>
                 </section>
             </div>
+            </div>  
             <br>
             <br>
-        <footer>
-            <b>La Sarten por el Mango S.A.S. NIT:901.234.567-8 Todos los derechos reservados</b><br>
-            <b>Siganos en nuestras redes sociales @lasarten_mango</b>
-            <img class="imgfoot" src="redes.png">
-        </footer>
+            <footer>
+                <b>La Sarten por el Mango S.A.S. NIT:901.234.567-8 Todos los derechos reservados</b><br>
+                <b>Siganos en nuestras redes sociales @lasarten_mango</b>
+                <img class="imgfoot" src="redes.png">
+            </footer>   
+        </div>
     </body>
 
     </html>

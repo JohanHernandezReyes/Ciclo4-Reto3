@@ -13,18 +13,18 @@
         <script type="text/javascript" src="js/Funciones.js"></script>
     </head>
 
-    <body class="container aut" onload="Verificarlogin();">
+    <body class="container aut" onload="Verificarlogin(sessionStorage.getItem('id'), sessionStorage.getItem('role'));">
         <header>
             <h1><img class="imgheader" src="/logo_sin_fondo.png">La Sarten por el Mango</h1>
         </header>
-            <button id="viewproducts" onclick="ConsultarProductos()">Consultar Productos</button><br><br>
-            <button id="newproducts" onclick="MostrarFormNuevoProducto()">Crear un producto</button><br><br>
+            <button class="COORD" id="viewproducts" onclick="ConsultarProductos()">Consultar Productos</button><br><br>
+            <button class="ADM" id="newproducts" onclick="MostrarFormNuevoProducto()">Crear un producto</button><br><br>
            
-            <div id="ResultProducts"></div>
+            <div class="col-12" id="ResultProducts"></div>
            
             <h3 id="titnewp" align="center" hidden="true"><b></b><br></h3>
-            <div id="formregistrop" class="formbig" hidden="true">
-                <section style="float:left">
+            <div id="formregistrop" class="formbig col-5" hidden="true">
+                <section class="col-2" style="float:left">
                     <label><b>Reference:</b></label>
                     <input id="ref" type="text"><br>
                     <label><b>Brand:</b></label><br>
@@ -36,14 +36,14 @@
                     <label><b>Dimensiones:</b></label><br>
                     <input id="dimensiones" type="text"><br>
                 </section>
-                <section style="float:right">
+                <section class="col-6" style="float:right">
                     <label><b>Descripcion</b></label>
                     <input id="desc" type="text"><br>
                     <label><b>Precio:</b></label><br>
                     <input id="price" type="number" min="0.00" max="100000000.00" step="1.00"><br>
                     <label><b>Cantidad:</b></label>
                     <input id="Q" type="number"><br>
-                    <label><b>Imagen:</b></label>
+                    <label><b>Ruta Imagen:</b></label>
                     <input id="photography" type="text"><br>
                     <label><b>Producto Disponible:</b></label><br>
                     <select id="available" style="width:85%" style="height:45%">
