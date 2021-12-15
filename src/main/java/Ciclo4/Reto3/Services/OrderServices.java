@@ -27,8 +27,8 @@ public class OrderServices {
         return OrdersRepository.BuscarOrdenZona(zone);
     }
     
-    public List<Order> BuscarOrdenesVendedor(String salesman){
-        return OrdersRepository.BuscarOrdenesVendedor(salesman);
+    public List<Order> BuscarOrdenStatus(String status){
+        return OrdersRepository.BuscarOrdenStatus(status);
     }
     
     public Order GuardarOrden(Order O){
