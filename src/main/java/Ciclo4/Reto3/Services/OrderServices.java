@@ -22,14 +22,6 @@ public class OrderServices {
     public Optional<Order> BuscarOrdenId(int id){
         return OrdersRepository.BuscarOrden(id);
     }
-       
-    public List<Order> BuscarOrdenZona(String zone){
-        return OrdersRepository.BuscarOrdenZona(zone);
-    }
-    
-    public List<Order> BuscarOrdenStatus(String status){
-         return OrdersRepository.BuscarOrdenStatus(status);
-    }
            
     public Order GuardarOrden(Order O){
         

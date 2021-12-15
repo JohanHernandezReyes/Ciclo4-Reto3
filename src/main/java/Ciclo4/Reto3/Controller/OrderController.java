@@ -22,16 +22,6 @@ public class OrderController {
         return OrdersServices.MostrarOrdenes();
     }
     
-    @GetMapping("/zona/{zone}")
-    public List<Order> BuscarOrdenZona(@PathVariable("zone") String zone){
-        return OrdersServices.BuscarOrdenZona(zone);
-    }
-    
-    @GetMapping("/state/{status}")
-    public List<Order> BuscarOrdenStatus(@PathVariable("status") String status){
-        return OrdersServices.BuscarOrdenStatus(status);
-    }
-    
     @GetMapping("/{id}")
     public Optional<Order> BuscarOrdenId(@PathVariable("id") int id){
         return OrdersServices.BuscarOrdenId(id);
