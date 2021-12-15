@@ -21,6 +21,14 @@ public class OrderRepository {
         return OrdersCRUD.findById(id);
     }
     
+    public List<Order> BuscarOrdenZona(String zone){
+        return OrdersCRUD.findByZone(zone);
+    }
+    
+    public List<Order> BuscarOrdenStatus(String status){
+        return OrdersCRUD.findByStatus(status);
+    }
+    
     public Order GuardarOrden(Order O){
         return OrdersCRUD.save(O);
     } 

@@ -27,6 +27,16 @@ public class OrderController {
         return OrdersServices.BuscarOrdenId(id);
     }
    
+    @GetMapping("/zona/{zone}")
+    public List<Order> BuscarOrdenZona(@PathVariable("zone") String zone){
+        return OrdersServices.BuscarOrdenZona(zone);
+    }
+    
+    @GetMapping("/state/{status}")
+    public List<Order> BuscarOrdenStatus(@PathVariable("status") String status){
+        return OrdersServices.BuscarOrdenStatus(status);
+    }
+    
     @PostMapping("/new")
     @ResponseStatus(HttpStatus.CREATED)
     public Order GuardarOrden(@RequestBody Order O){

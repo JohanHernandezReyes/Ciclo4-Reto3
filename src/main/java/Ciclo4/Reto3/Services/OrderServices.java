@@ -23,6 +23,14 @@ public class OrderServices {
         return OrdersRepository.BuscarOrden(id);
     }
            
+    public List<Order> BuscarOrdenZona(String zone){
+        return OrdersRepository.BuscarOrdenZona(zone);
+    }
+    
+    public List<Order> BuscarOrdenesVendedor(String salesman){
+        return OrdersRepository.BuscarOrdenesVendedor(salesman);
+    }
+    
     public Order GuardarOrden(Order O){
         
         Optional <Order> NextOrder = OrdersRepository.LastId(); 
