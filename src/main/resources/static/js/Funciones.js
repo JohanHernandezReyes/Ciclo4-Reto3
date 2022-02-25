@@ -683,7 +683,16 @@ function NewOrder() {
         }
     });
     let fecha = new Date();
-    $("#regday").val(fecha.getFullYear() + "-" + (fecha.getMonth() + 1) + "-" + fecha.getDate());
+    let separadormes="-";
+    let separadordia="-";
+    if(fecha.getMonth()<10){
+        separadormes="-0"
+    }
+    if(fecha.getDate()<10){
+        separadordia="-0"
+    }
+    
+    $("#regday").val(fecha.getFullYear() + separadormes + (fecha.getMonth() + 1) + separadordia + fecha.getDate());
     ListaProductos();
     if (sessionStorage.getItem("pedido") !== " " && sessionStorage.getItem("pedido") !== null) {
         objeto = JSON.parse(sessionStorage.getItem("pedido"));
