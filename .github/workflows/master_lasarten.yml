@@ -27,7 +27,7 @@ jobs:
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
-          name: java-app
+          name: Ciclo4-Reto3-1.0
           path: '${{ github.workspace }}/target/*.jar'
 
   deploy:
@@ -41,7 +41,7 @@ jobs:
       - name: Download artifact from build job
         uses: actions/download-artifact@v2
         with:
-          name: java-app
+          name: Ciclo4-Reto3-1.0
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
