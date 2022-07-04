@@ -1,0 +1,110 @@
+img{
+    width: 170px;
+    align-self: center;
+
+}
+header{
+    background-color: rgb(109, 109, 236);
+    text-align: center;
+    width: 100%;    
+}
+
+footer{
+    background-color: rgb(109, 109, 236);
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+}
+
+.imgfoot{
+    width: 140px;
+    vertical-align: 1 cm;
+    line-height: 1px;   
+}
+
+button{
+    background:#1a13a0;
+    color:white;
+    font-size: 20px;
+}
+
+a{
+    text-align: center;
+}
+
+.form{
+    margin: 0 auto;
+    width: 235px;
+    border: 2px solid rgb(8, 8, 8);
+    border-radius: 1em;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+.formbig{
+    margin: 0 auto;
+    width: 450px;
+    border: 2px solid rgb(8, 8, 8);
+    border-radius: 1em;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    height: 55%;
+}
+
+.imgheader{
+    width: 80px;
+    vertical-align: 1 cm;
+    line-height: 1px;   
+}
+
+section{
+    width:225px;
+    padding-left: 5px;
+    left: 0;
+    height: 95%;
+    bottom: 0;
+}
+
+table{
+    border: 2px solid black;
+    font-size: 18;
+    
+}
+
+th, td, tr, thead{
+    border: 1px solid black;
+    text-align: center;
+}
+
+input:invalid {
+    border: 2px solid red;
+}
+
+
+.formorder{
+    margin: 0 auto;
+    width: 450px;
+    border: 2px solid rgb(8, 8, 8);
+    border-radius: 1em;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    height: auto;
+}
+
+.buttaproval{
+    background:#09db14;
+    color:rgb(8, 8, 8);
+    font-size: 20px;
+}
+
+
+.buttreject{
+    background:#ff0101;
+    color:rgb(8, 8, 8);
+    font-size: 20px;
+}
