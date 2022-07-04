@@ -28,7 +28,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: java-app
-          path: '${{ github.workspace }}/target/*.war'
+          path: '${{ github.workspace }}/target/*.jar'
 
   deploy:
     runs-on: windows-latest
@@ -50,4 +50,4 @@ jobs:
           app-name: 'lasarten'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_7CCE7474E06B435D857B20BA11BDBC77 }}
-          package: '*.war'
+          package: '*.jar'
